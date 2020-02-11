@@ -60,8 +60,8 @@
 				58798C5323F3413A000057CC /* SceneDelegate.swift */,
 				58798C5523F3413A000057CC /* ViewController.swift */,
 				58798C5723F3413A000057CC /* Main.storyboard */,
-				58798C5A23F3413C000057CC /* Assets.xcassets */,
 				58798C5C23F3413C000057CC /* LaunchScreen.storyboard */,
+				58798C5A23F3413C000057CC /* Assets.xcassets */,
 				58798C5F23F3413C000057CC /* Info.plist */,
 			);
 			path = TemperatureConverter;
