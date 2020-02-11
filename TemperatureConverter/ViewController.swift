@@ -15,6 +15,7 @@ class ViewController: UIViewController {
         }
     
 
-
+    @IBOutlet weak var season: UIImageView!
+    
 }
 
