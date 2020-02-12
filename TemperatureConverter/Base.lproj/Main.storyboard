@@ -15,34 +15,51 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="sunset" translatesAutoresizingMaskIntoConstraints="NO" id="9DZ-f2-yQ6">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sunset" translatesAutoresizingMaskIntoConstraints="NO" id="9DZ-f2-yQ6">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0°C" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TNZ-Ia-7X8">
-                                <rect key="frame" x="188" y="371" width="38" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0°C" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TNZ-Ia-7X8">
+                                <rect key="frame" x="188.5" y="413" width="37.5" height="30"/>
                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="25"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Q2t-UX-72w">
-                                <rect key="frame" x="93" y="434" width="228" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0°F" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GFk-If-fgY">
+                                <rect key="frame" x="189" y="523" width="36.5" height="30"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="25"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Q2t-UX-72w">
+                                <rect key="frame" x="57" y="468" width="300" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="296" id="AyO-j6-Nfo"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="sliderValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="wXc-Q2-dIh"/>
+                                </connections>
                             </slider>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0°F" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GFk-If-fgY">
-                                <rect key="frame" x="188" y="500" width="37" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="25"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="9DZ-f2-yQ6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="3VQ-qm-EEF"/>
+                            <constraint firstItem="Q2t-UX-72w" firstAttribute="top" secondItem="TNZ-Ia-7X8" secondAttribute="bottom" constant="25" id="4eH-P7-GEJ"/>
+                            <constraint firstItem="GFk-If-fgY" firstAttribute="top" secondItem="Q2t-UX-72w" secondAttribute="bottom" constant="25" id="6zV-aK-j9d"/>
+                            <constraint firstItem="TNZ-Ia-7X8" firstAttribute="centerX" secondItem="9DZ-f2-yQ6" secondAttribute="centerX" id="84L-9P-YZO"/>
+                            <constraint firstItem="Q2t-UX-72w" firstAttribute="centerY" secondItem="9DZ-f2-yQ6" secondAttribute="centerY" constant="35" id="HID-k7-Z7i"/>
+                            <constraint firstItem="9DZ-f2-yQ6" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="KAZ-v9-dR3"/>
+                            <constraint firstAttribute="bottom" secondItem="9DZ-f2-yQ6" secondAttribute="bottom" id="M7z-Ji-wZi"/>
+                            <constraint firstItem="9DZ-f2-yQ6" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="gZD-NB-i38"/>
+                            <constraint firstItem="GFk-If-fgY" firstAttribute="centerX" secondItem="9DZ-f2-yQ6" secondAttribute="centerX" id="mWl-oR-G8r"/>
+                            <constraint firstItem="Q2t-UX-72w" firstAttribute="centerX" secondItem="9DZ-f2-yQ6" secondAttribute="centerX" id="vRf-HC-W1g"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="celciusLabel" destination="TNZ-Ia-7X8" id="k3Q-tJ-mxR"/>
+                        <outlet property="fahrenheitLabel" destination="GFk-If-fgY" id="ofa-nW-hIG"/>
                         <outlet property="season" destination="9DZ-f2-yQ6" id="RsP-aS-gvz"/>
+                        <outlet property="slider" destination="Q2t-UX-72w" id="FSB-e8-Zbx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
